@@ -1,0 +1,74 @@
+@use 'sass:color';
+@use '../utilities/' as *;
+
+.about {
+
+    &__container { // about > about__container
+        @extend %width-max;
+        @extend %margin-auto;
+
+        &--display { // container display modifier
+            // temp
+            display: block
+        }
+    }
+    
+    &__content { // about > about__container > about__content
+        @extend %margin-auto;
+        width: min(calc(100% - 2rem), rem(500));
+        text-align: center;
+        margin-bottom: rem(32);
+
+        @include breakpointMin (large-screen) {
+            text-align: left;
+        }
+    }
+    &__head { // about__content > h2
+        @extend %text-header;
+        margin-bottom: rem(16);
+        padding-inline: rem(32);
+        font-size: clampf(28, 920, 38);
+
+        @include breakpointMin (large-screen) {
+            padding-inline: 0;
+        }
+    }
+}
+
+.features { // about > features
+    padding-left: 3%;
+
+    &--display { // features display modifier
+        display: flex;
+        flex-direction: column;
+        gap: clampf(24, 920, 32);
+    }
+
+    &__head { // features__head
+        $bg: #f25f3a; // var(--clr-primary-100)
+        @include text-style(var(--clr-neutral-200), B);
+        background-color: rgba($bg, .125);
+        border-radius: 50px 0 0 50px;
+        margin-bottom: rem(16);
+
+        display: flex;
+        align-items: center;
+        gap: rem(14);
+    }
+    &__title { // features__head > p
+        @extend %text-header;
+    }
+    .num { // .features__head > num
+        @extend %border-radius-50px;
+        width: min(20%, 70px);
+        text-align: center;
+        padding: rem(8);
+        background-color: var(--clr-primary-100);
+    }
+
+    &__desc { // .features__desc
+        @include text-style(var(--clr-neutral-300), normal);
+
+        // @include breakpointMin(large-screen) { // breakpoint 920px                 }
+    }
+}
