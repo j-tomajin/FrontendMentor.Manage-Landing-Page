@@ -1,0 +1,44 @@
+@use '../utilities/' as *;
+
+.hero {
+
+    &__container { // hero__container
+        @extend %width;
+        @extend %margin-auto;
+
+        &--display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(32);
+
+            // temp
+            display: none;
+
+            @include breakpointMin(large-screen) {
+                flex-direction: row-reverse;
+
+            }
+        }
+    }
+    
+    &__content { // hero > hero__container > hero__content
+        text-align: center;
+        width: min(100%, rem(440));
+        
+        @include breakpointMin(large-screen) {
+            text-align: left;
+        }
+    }
+    &__head { // hero__content > h1
+        @extend %text-header;
+        font-size: clampf(32, 920, 48);
+        line-height: 1.3;
+        margin-bottom: rem(10);
+    }
+    &__sub { // hero__content > p
+        @extend %text-sub;
+        margin-bottom: clampf(32, 920, 48);
+        width: min(100%, rem(340));
+    }
+}
