@@ -1,0 +1,355 @@
+/* placeholder */
+.header__container, .hero__container {
+  width: min(100% - 3rem, 69.6875rem);
+}
+
+.about__container {
+  width: min(100%, 69.6875rem);
+}
+
+.header__container, .about__container, .about__content, .hero__container {
+  margin-inline: auto;
+}
+
+.about__head, .features__title, .hero__head {
+  color: var(--clr-primary-200);
+  font-family: "Be VietnamB";
+}
+
+.hero__sub {
+  color: var(--clr-neutral-300);
+}
+
+.features .num, .link {
+  border-radius: 50px;
+}
+
+:root {
+  --clr-primary-100: hsl(12deg, 88%, 59%);
+  --clr-primary-200: hsl(228deg, 39%, 23%);
+  --clr-neutral-100: hsl(0deg, 0%, 98%);
+  --clr-neutral-200: hsl(13deg, 100%, 96%);
+  --clr-neutral-300: hsl(227deg, 12%, 61%);
+  --clr-neutral-400: hsl(233deg, 12%, 13%);
+}
+
+/* BOILERPLATE */
+/* Set core root defaults */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  vertical-align: baseline;
+}
+
+/* Set core body defaults */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+summary {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Be Vietnam";
+  background-color: #fcfcfd;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a, a:focus, a:visited {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+@font-face {
+  font-family: "Be Vietnam";
+  src: local("Be Vietnam"), url("../assets/fonts/BeVietnam-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Be VietnamSB";
+  src: local("Be Vietnam"), url("../assets/fonts/BeVietnam-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Be VietnamB";
+  src: local("Be Vietnam"), url("../assets/fonts/BeVietnam-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+.hamburger {
+  background-color: transparent;
+}
+
+.link {
+  color: 500;
+  background-color: var(--clr-primary-100);
+  padding: 0.75rem 1.5rem;
+}
+
+.hero__container--display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  display: none;
+}
+@media (min-width: 57.5em) {
+  .hero__container--display {
+    flex-direction: row-reverse;
+  }
+}
+.hero__content {
+  text-align: center;
+  width: min(100%, 27.5rem);
+}
+@media (min-width: 57.5em) {
+  .hero__content {
+    text-align: left;
+  }
+}
+.hero__head {
+  font-size: clamp(2rem, 1.3119266055rem + 2.9357798165vw, 3rem);
+  line-height: 1.3;
+  margin-bottom: 0.625rem;
+}
+.hero__sub {
+  margin-bottom: clamp(2rem, 1.3119266055rem + 2.9357798165vw, 3rem);
+  width: min(100%, 21.25rem);
+}
+
+.about__container--display {
+  display: block;
+}
+.about__content {
+  width: min(100% - 2rem, 31.25rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 57.5em) {
+  .about__content {
+    text-align: left;
+  }
+}
+.about__head {
+  margin-bottom: 1rem;
+  padding-inline: 2rem;
+  font-size: clamp(1.75rem, 1.3199541284rem + 1.8348623853vw, 2.375rem);
+}
+@media (min-width: 57.5em) {
+  .about__head {
+    padding-inline: 0;
+  }
+}
+
+.features {
+  padding-left: 3%;
+}
+.features--display {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.1559633028rem + 1.4678899083vw, 2rem);
+}
+.features__head {
+  color: var(--clr-neutral-200);
+  font-family: "Be VietnamB";
+  background-color: rgba(242, 95, 58, 0.125);
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.features .num {
+  width: min(20%, 70px);
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--clr-primary-100);
+}
+.features__desc {
+  color: var(--clr-neutral-300);
+}
+
+.header {
+  padding-block: 2.5rem;
+}
+.header__container--display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.header__container--position {
+  position: relative;
+}
+.header__logo {
+  margin-top: 6px;
+}
+@media (max-width: 48.74875em) {
+  .header__link {
+    display: none;
+  }
+}
+
+.nav {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.3125rem;
+  text-align: center;
+  padding: 3rem;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in;
+}
+.nav--position {
+  position: absolute;
+  top: 50px;
+}
+.nav__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.nav__link {
+  color: 600;
+}
+@media (min-width: 48.75em) {
+  .nav {
+    pointer-events: auto;
+  }
+}
+
+.nav-toggle {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
