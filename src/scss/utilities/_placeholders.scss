@@ -1,0 +1,29 @@
+// %
+@use 'functions' as *;
+@use 'breakpoints' as *;
+@use 'mixins' as *;
+/* placeholder */
+
+%width {
+    width: min(calc(100% - 3rem), rem(1115));
+}
+
+%width-max {
+    width: min(100%, rem(1115));
+}
+
+%margin-auto {
+    margin-inline: auto;
+}
+
+%text-header {
+    @include text-style(var(--clr-primary-200), B)
+}
+
+%text-sub {
+    @include text-style(var(--clr-neutral-300), normal);
+}
+
+%border-radius-50px {
+    border-radius: 50px;
+}
