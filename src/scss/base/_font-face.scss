@@ -1,0 +1,28 @@
+// Font Family - Be Vietnam
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: 
+        local('Be Vietnam'),
+        url('../assets/fonts/BeVietnam-Regular.ttf');
+font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be VietnamSB';
+    src: 
+        local('Be Vietnam'),
+        url('../assets/fonts/BeVietnam-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be VietnamB';
+    src: 
+        local('Be Vietnam'),
+        url('../assets/fonts/BeVietnam-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
