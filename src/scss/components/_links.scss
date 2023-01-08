@@ -1,0 +1,8 @@
+@use '../utilities/' as *;
+
+.link {
+    @extend %border-radius-50px;
+    @include text-style(500, var(--clr-neutral-100));
+    background-color: var(--clr-primary-100);
+    padding: rem(12) rem(24);
+}
