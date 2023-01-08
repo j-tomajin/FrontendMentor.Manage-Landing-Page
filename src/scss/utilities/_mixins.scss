@@ -1,0 +1,12 @@
+@use 'functions' as *;
+
+// text style
+@mixin text-style($color, $ff) {
+    color: $color;
+
+    @if $ff == SB {
+        font-family: 'Be VietnamSB';
+    } @else if $ff == B {
+        font-family: 'Be VietnamB';
+    }
+}
