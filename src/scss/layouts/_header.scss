@@ -1,0 +1,71 @@
+@use '../utilities/' as *;
+
+.header {
+    padding-block: rem(40);
+
+    &__container { // header container
+        @extend %width;
+        @extend %margin-auto;
+
+        &--display { // display modifier
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            // temp display
+            display: none;
+        }
+        
+        &--position { // position modifier
+            position: relative;
+        }
+    }
+
+    &__logo { // header logo
+        margin-top: 6px;
+    }
+
+    &__link {
+        @include breakpointMax(medium-screen) {
+            display: none;
+        }
+    }
+}
+
+.nav {
+    width: 100%;
+    background-color: white;
+    border-radius: rem(5);
+    text-align: center;
+    padding: rem(48);
+
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+
+    transition: all .3s ease-in;
+
+    &--position { // nav position modifier
+        position: absolute;
+        top: 50px;
+    }
+
+    &__item:not(:last-child) { // nav item - li
+        margin-bottom: rem(16);
+    }
+    &__link { // nav link - a
+        @include text-style(600, var(--clr-primary-200));
+    }
+
+    @include breakpointMin(medium-screen) { // breakpoints 780px
+        pointer-events: auto;
+    }
+}
+
+.nav-toggle { // 
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
