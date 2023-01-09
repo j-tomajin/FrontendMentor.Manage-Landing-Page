@@ -9,7 +9,7 @@
 
         &--display { // container display modifier
             // temp
-            display: block
+            display: none;
         }
     }
     
@@ -36,7 +36,8 @@
 }
 
 .features { // about > features
-    padding-left: 3%;
+    padding-left: 3%; 
+    //lagyan ng max-width 
 
     &--display { // features display modifier
         display: flex;
