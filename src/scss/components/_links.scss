@@ -1,8 +1,19 @@
 @use '../utilities/' as *;
 
+.link-padding {
+    padding: rem(12) rem(24);
+}
+
 .link {
     @extend %border-radius-50px;
-    @include text-style(500, var(--clr-neutral-100));
+    @extend .link-padding;
+    @include text-style(var(--clr-neutral-100), SB);
     background-color: var(--clr-primary-100);
-    padding: rem(12) rem(24);
+}
+
+.link-light {
+    @extend .link-padding;
+    @extend %border-radius-50px;
+    @include text-style(var(--clr-primary-100), B);
+    background-color: var(--clr-neutral-100);
 }
