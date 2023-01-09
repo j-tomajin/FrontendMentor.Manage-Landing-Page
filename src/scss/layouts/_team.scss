@@ -1,0 +1,38 @@
+@use '../utilities/' as *;
+
+.team {
+background-color: var(--clr-primary-100);
+
+    &__container {
+        @extend %width-max;
+        @extend %margin-auto;
+        text-align: center;
+        padding: rem(105) 0;
+        
+        &--display { // team__container display modifier
+            // display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(32);
+            
+            //temp 
+            display: none;
+        }
+
+        @include breakpointMin(large-screen) { // breakpoin 920px
+            text-align: left;
+
+            &--display {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__head { // team h3
+        @extend %text-header-light;
+        font-size: clampf(40, 920, 54);
+        width: min(100%, rem(700));
+        padding-inline: clampf(24, 1440, 0);
+    }
+}
