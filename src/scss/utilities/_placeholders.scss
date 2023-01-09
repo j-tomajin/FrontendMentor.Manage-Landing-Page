@@ -20,10 +20,22 @@
     @include text-style(var(--clr-primary-200), B)
 }
 
+%text-header-light {
+    @include text-style(var(--clr-neutral-100), B)
+}
+
 %text-sub {
     @include text-style(var(--clr-neutral-300), normal);
 }
 
 %border-radius-50px {
     border-radius: 50px;
+}
+
+%hover-effect {
+    transition: all .3s;
+
+    &:hover {
+        color: var(--clr-primary-100);
+    }
 }
