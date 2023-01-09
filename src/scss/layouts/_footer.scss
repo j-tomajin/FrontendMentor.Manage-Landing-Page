@@ -4,6 +4,84 @@ footer {
     margin-top: auto;
 }
 
+.footer {
+    background-color: var(--clr-primary-200);
+
+    a {
+        @include text-style(var(--clr-neutral-100), normal);
+        @extend %hover-effect;
+    }
+
+    &__container { // footer > footer__container
+        @extend %width;
+        @extend %margin-auto;
+        padding-block: clampf(50, 920, 60) clampf(30, 920, 60);
+    }
+
+    &__nav { // footer__container > footer__nav
+        // padding-inline: rem(32);
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: rem(32);
+    }
+    &__list {
+        align-self: flex-start;
+        font-size: clampf(14, 920, 18);
+    }
+    &__item:not(:last-child) { // footer__nav li
+        margin-bottom: rem(12);
+    }
+
+    &__socials { // container > footer__socials
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        margin-bottom: rem(32);
+    }
+    .socials { // footer__socials > socials
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            font-size: 24px;
+            transition: transform .275s;
+
+            &:hover {
+                transform: translateY(rem(-10))
+            }
+        }
+    }
+    &__logo { // footer__socials > footer__logo
+        svg {
+            margin-inline: auto;
+        }
+    }
+
+    &__copyright {
+        @include text-style(var(--clr-neutral-300), normal);
+        text-align: center;
+        
+        @include breakpointMin(large-screen) {
+            text-align: right;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
