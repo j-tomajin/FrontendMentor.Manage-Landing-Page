@@ -13,7 +13,7 @@
             justify-content: space-between;
 
             // temp display
-            display: none;
+            // display: none;
         }
         
         &--position { // position modifier
@@ -55,7 +55,7 @@
         margin-bottom: rem(16);
     }
     &__link { // nav link - a
-        @include text-style(600, var(--clr-primary-200));
+        @include text-style(var(--clr-primary-200), B);
     }
 
     @include breakpointMin(medium-screen) { // breakpoints 780px
