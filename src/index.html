@@ -28,7 +28,7 @@
           <img src="./assets/icons/icon-hamburger.svg" alt="" class="hamburger-img">
         </button>
         <!-- NAVIGATION -->
-        <nav class="nav nav--position" aria-label="Main-Navigation">
+        <nav class="nav nav--position nav--display" aria-label="Main-Navigation">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">Pricing</a>
@@ -51,6 +51,7 @@
         </nav>
       </div>
     </header>
+
     <!-- MAIN -->
     <main>
       <!-- HERO SECTION -->
@@ -77,7 +78,7 @@
           <!-- ABOUT CONTENT -->
           <div class="about__content">
             <h2 class="about__head">What's different about Manage?</h2>
-            <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
+            <p class="about__desc">Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
             </p>
           </div>
 
@@ -130,25 +131,75 @@
 
       <!-- TESTIMONIALS -->
       <section class="testimonials">
+        <h3 class="testimonials__header">What they've said</h3>
+
+        <div class="testimonials__container testimonials__container--display testimonials__container--position">
+          
+          <div class="testimonials__cards testimonials__cards--display testimonials__cards--position cards">
+
+            <!-- USER TESTIMONIAL -->
+            <div class="user user--position">
+              <!-- USER PROFILE -->
+              <div class="user__profile user__profile--position">
+                <img src="./assets/images/avatar-anisha.png" alt="">
+              </div>
+              <div class="user__name">Anisha Li</div>
+              <p class="user__testimonial">
+                “Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”
+              </p>
+            </div>
+
+            <!-- USER TESTIMONIAL -->
+            <div class="user user--position">
+              <!-- USER PROFILE -->
+              <div class="user__profile user__profile--position">
+                <img src="./assets/images/avatar-ali.png" alt="">
+              </div>
+              <div class="user__name">Ali Bravo</div>
+              <p class="user__testimonial">
+                “We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”
+              </p>
+            </div>
+
+            <!-- USER TESTIMONIAL -->
+            <div class="user user--position">
+              <!-- USER PROFILE -->
+              <div class="user__profile user__profile--position">
+                <img src="./assets/images/avatar-richard.png" alt="">
+              </div>
+              <div class="user__name">Richard Watts</div>
+              <p class="user__testimonial">
+                “Manage allows us to provide structure and process. It keeps us organized and focused. I can't stop recommending them to everyone I talk to!”
+              </p>
+            </div>
+
+            <!-- USER TESTIMONIAL -->
+            <div class="user user--position">
+              <!-- USER PROFILE -->
+              <div class="user__profile user__profile--position">
+                <img src="./assets/images/avatar-shanai.png" alt="">
+              </div>
+              <div class="user__name">Shanai Gough</div>
+              <p class="user__testimonial">
+                “Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”
+              </p>
+            </div>
+
+            <!-- end -->
+          </div>
+
+
+        </div>
+
+
+
         <!-- 
-  What they've said
 
-  Anisha Li
-  “Manage has supercharged our team's workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
+  
+  
 
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can't stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
+  
+  
 
   Get Started
 
@@ -158,16 +209,17 @@
       <!-- TEAM -->
       <article class="team">
         <div class="team__container team__container--display">
-          <h3 class="team__head">Simplify how your team works today.</h3>
+          <h4 class="team__head">Simplify how your team works today.</h4>
           <a href="#" class="team__link link-light">Get Started</a>
         </div>
       </article>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container footer__container--display">
         <!-- FORMS -->
-        <form action="#" class="footer__form" id="footer-form">
+        <form action="#" class="footer__form footer__form--grid-area" id="footer-form">
           <fieldset class="footer__form--display">
             <legend class="sr-only">Updates</legend>
             <div class="input_box">
@@ -179,7 +231,7 @@
         </form>
 
         <!-- FOOTER NAVIGATION -->
-        <div role="navigation" class="footer__nav" aria-label="Footer-Navigation">
+        <div role="navigation" class="footer__nav footer__nav--grid-area" aria-label="Footer-Navigation">
           <ul class="footer__list">
             <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
             <li class="footer__item"><a href="#" class="footer__link">Pricing</a></li>
@@ -195,7 +247,7 @@
         </div>
 
         <!-- SOCIALS -->
-        <div class="footer__socials">
+        <div class="footer__socials footer__socials--grid-area">
           <div class="socials">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
@@ -211,7 +263,7 @@
         </div>
 
         <!-- COPYRIGHT -->
-        <div class="footer__copyright">
+        <div class="footer__copyright footer__copyright--grid-area">
           Copyright 2020. All Rights Reserved
         </div>
       </div>
