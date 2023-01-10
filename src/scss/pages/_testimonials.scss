@@ -1,0 +1,84 @@
+@use '../utilities/' as *;
+
+.testimonials {
+    @extend %width-carousel;
+    @extend %margin-auto;
+    padding-block: clampf(80, 920, 125) clampf(60, 920, 190);
+    overflow-x: hidden;
+
+    // & > h3
+    &__header {
+        @extend %text-header;
+        text-align: center;
+        font-size: clampf(32, 920, 48);
+        margin-bottom: clampf(100, 920, 115);
+    }
+    
+    &__container {
+        height: 270px;
+        // cursor: grab;
+        
+        &--position {
+            position: relative;
+        }
+    }
+    
+    &__cards {
+        text-align: center;
+        pointer-events: none;
+
+        &--display {
+            display: grid;
+            grid-template-columns: repeat(4, clampf(375, 920, 500));
+            gap: 24px;
+        }
+    }
+
+    .cards {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.user {
+    $bg: hsl(227, 12%, 61%);
+    width: clampf(375, 920, 500);
+    background-color: rgba($bg, .1);
+
+    padding: {
+        block: rem(75) rem(46);
+        inline: clampf(24, 920, 44);
+    };
+    
+
+    &--position {
+        position: relative;
+    }
+
+    &__profile {
+        --img-width: 100px;
+        width: var(--img-width);
+        margin-inline: auto;
+        border: 5px solid var(--clr-neutral-300);
+        border-radius: 50%;
+        pointer-events: none;
+
+        &--position {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+    &__name {
+        @include text-style(var(--clr-primary-200), B);
+        font-size: rem(17);
+        margin-bottom: rem(24);
+        pointer-events: none;
+    }
+    &__testimonial {
+        @include text-style(var(--clr-neutral-300), SB);
+        pointer-events: none;
+    }
+}
