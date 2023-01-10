@@ -1,6 +1,7 @@
 @use '../utilities/' as *;
 
 .hero {
+    padding-top: clampf(50, 920, 125);
 
     &__container { // hero__container
         @extend %width;
@@ -10,10 +11,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
             gap: rem(32);
 
             // temp
-            display: none;
+            // display: none;
 
             @include breakpointMin(large-screen) {
                 flex-direction: row-reverse;
