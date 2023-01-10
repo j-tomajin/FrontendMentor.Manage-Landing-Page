@@ -2,6 +2,10 @@
 
 .hamburger {
     background-color: transparent;
+
+    @include breakpointMin(large-screen) {
+        display: none;
+    }
 }
 
 .btn {
