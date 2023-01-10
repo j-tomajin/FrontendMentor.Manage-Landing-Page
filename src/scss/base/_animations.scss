@@ -1,1 +1,21 @@
 @use '../utilities/' as *;
+
+.cards {
+    animation: slide 30s linear forwards infinite;
+    
+    @include breakpointMin(large-screen) {
+        animation: none;
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: clampf(-1300, 920, -960);
+    }
+}
+
+// left: rem(-960);
