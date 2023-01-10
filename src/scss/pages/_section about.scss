@@ -2,14 +2,19 @@
 @use '../utilities/' as *;
 
 .about {
+    padding-top: clampf(100, 920, 125);
 
     &__container { // about > about__container
         @extend %width-max;
         @extend %margin-auto;
 
         &--display { // container display modifier
-            // temp
-            display: none;
+
+            @include breakpointMin(large-screen) {
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+            }
         }
     }
     
@@ -21,11 +26,12 @@
 
         @include breakpointMin (large-screen) {
             text-align: left;
+            margin-inline: 0;
         }
     }
     &__head { // about__content > h2
         @extend %text-header;
-        margin-bottom: rem(16);
+        margin-bottom: clampf(16, 920, 24);
         padding-inline: rem(32);
         font-size: clampf(28, 920, 38);
 
@@ -33,16 +39,28 @@
             padding-inline: 0;
         }
     }
+    &__desc {
+        @extend %text-sub;
+
+        @include breakpointMin(large-screen) {
+            width: 70%;
+        }
+    }
 }
 
 .features { // about > features
+    @extend %margin-auto;
     padding-left: 3%; 
-    //lagyan ng max-width 
+    width: min(100%, rem(540));
 
     &--display { // features display modifier
         display: flex;
         flex-direction: column;
         gap: clampf(24, 920, 32);
+    }
+
+    @include breakpointMin(large-screen) {
+        padding-left: 0;
     }
 
     &__head { // features__head
@@ -55,6 +73,10 @@
         display: flex;
         align-items: center;
         gap: rem(14);
+
+        @include breakpointMin(large-screen) {
+            background-color: unset
+        }
     }
     &__title { // features__head > p
         @extend %text-header;
@@ -70,6 +92,8 @@
     &__desc { // .features__desc
         @include text-style(var(--clr-neutral-300), normal);
 
-        // @include breakpointMin(large-screen) { // breakpoint 920px                 }
+        @include breakpointMin(large-screen) { // breakpoint 920px
+            padding-left: calc(rem(14) + 70px);
+        }
     }
 }
