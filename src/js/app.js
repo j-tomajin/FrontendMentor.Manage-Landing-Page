@@ -58,3 +58,53 @@ const emailValidation = () => {
         setSuccess(email);
     }
 }
+
+// carousel
+const container = document.querySelector('.testimonials__container')
+const cards = document.querySelector('.cards')
+
+// keep track of user's mouse down and up
+let isPressedDown = false
+
+// 
+let cursorXspace;
+
+container.addEventListener('mousedown', (e) => {
+    isPressedDown = true
+
+    cursorXspace = e.offsetX - cards.offsetLeft
+    container.style.cursor = 'grabbing';
+})
+
+container.addEventListener('mouseup', () => {
+    container.style.cursor = 'grab';
+})
+window.addEventListener('mouseup', () => {
+    isPressedDown = false
+})
+
+container.addEventListener('mousemove', (e) => {
+    if(!isPressedDown) return
+
+    e.preventDefault()
+    cards.style.left = `${e.offsetX - cursorXspace}px`
+    boundCards()
+})
+
+function boundCards() {
+    const container_rect = container.getBoundingClientRect()
+    const cards_rec = cards.getBoundingClientRect()
+
+    if(parseInt(cards.style.left) > 0) {
+        cards.style.left = '0';
+    } else if(cards_rec.right < container_rect.right) {
+        cards.style.left = `-${cards_rec.width - container_rect.width}px`
+    }
+}
+
+container.addEventListener('touchmove', () => {
+    isPressedDown = true
+
+    cursorXspace = e.offsetX - cards.offsetLeft
+})
+// addEventListener('touch')
