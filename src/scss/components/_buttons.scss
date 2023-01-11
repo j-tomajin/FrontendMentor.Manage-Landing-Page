@@ -3,7 +3,7 @@
 .hamburger {
     background-color: transparent;
 
-    @include breakpointMin(large-screen) {
+    @include breakpointMin(medium-screen) {
         display: none;
     }
 }
