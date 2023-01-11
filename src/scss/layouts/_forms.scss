@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../utilities/' as *;
 
 .footer__form {
@@ -56,6 +57,8 @@
     .footer__btn {
         @extend %border-radius-50px;
         @extend %text-header-light;
+        @extend %btn-hover;
+
         text-transform: uppercase;
         font-size: rem(15);
 
