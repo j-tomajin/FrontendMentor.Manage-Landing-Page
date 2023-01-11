@@ -273,7 +273,7 @@ a:not([class]) {
 .hamburger {
   background-color: transparent;
 }
-@media (min-width: 57.5em) {
+@media (min-width: 48.75em) {
   .hamburger {
     display: none;
   }
@@ -527,7 +527,7 @@ body {
   padding: 3rem;
   transform: translateY(20px);
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: all 0.3s ease-in;
 }
@@ -583,6 +583,12 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 120px 100px 50px;
+}
+@media (min-width: 48.75em) {
+  .nav-toggle {
+    box-shadow: none;
+  }
 }
 
 .team {
