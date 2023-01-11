@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../utilities/' as *;
 
 .link-padding {
@@ -5,15 +6,24 @@
 }
 
 .link {
+    $bg: rgb(242, 95, 59);
+    
     @extend %border-radius-50px;
     @extend .link-padding;
+    @extend %btn-hover;
     @include text-style(var(--clr-neutral-100), SB);
     background-color: var(--clr-primary-100);
 }
 
 .link-light {
+    $bg: rgb(242, 95, 59);
+
     @extend .link-padding;
     @extend %border-radius-50px;
     @include text-style(var(--clr-primary-100), B);
     background-color: var(--clr-neutral-100);
+
+    &:hover {
+       color: color.adjust($bg, $lightness: 20%);
+    }
 }
