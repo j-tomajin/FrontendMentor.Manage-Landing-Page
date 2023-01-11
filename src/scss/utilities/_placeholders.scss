@@ -1,4 +1,4 @@
-// %
+@use 'sass:color';
 @use 'functions' as *;
 @use 'breakpoints' as *;
 @use 'mixins' as *;
@@ -42,4 +42,12 @@
     &:hover {
         color: var(--clr-primary-100);
     }
+}
+
+%btn-hover {
+    $bg: rgb(242, 95, 59);
+
+    &:hover {
+        background-color: color.adjust($bg, $lightness: 10%);
+     }
 }
