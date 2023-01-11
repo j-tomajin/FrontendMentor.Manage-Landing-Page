@@ -1,7 +1,20 @@
 @use '../utilities/' as *;
 
+body {
+    background: {
+        // image: url('../assets/icons/bg-simplify-section-desktop.svg');
+        image: url('../assets/icons/bg-tablet-pattern.svg');
+        repeat: no-repeat;
+        // position: top right;
+        position-x: clampf(150, 1440, 750); 
+        position-y: rem(-110); 
+        size: contain;
+    };
+}
+
 .hero {
     padding-top: clampf(50, 920, 125);
+    
 
     &__container { // hero__container
         @extend %width;
