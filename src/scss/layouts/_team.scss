@@ -1,7 +1,20 @@
 @use '../utilities/' as *;
 
 .team {
-background-color: var(--clr-primary-100);
+    background-color: var(--clr-primary-100);
+    background: {
+        image: url('../assets/icons/bg-simplify-section-mobile.svg');
+        repeat: no-repeat;
+        size: cover;
+    };
+
+    @include breakpointMin(large-screen) {
+        background: {
+            image: url('../assets/icons/bg-simplify-section-desktop.svg');
+            repeat: no-repeat;
+            size: cover;
+        };
+    }
 
     &__container {
         @extend %width-max;
@@ -14,9 +27,6 @@ background-color: var(--clr-primary-100);
             flex-direction: column;
             align-items: center;
             gap: rem(32);
-            
-            //temp 
-            // display: none;
         }
 
         @include breakpointMin(large-screen) { // breakpoint 920px
