@@ -5,6 +5,8 @@
     @extend %margin-auto;
     padding-block: clampf(80, 920, 125) clampf(60, 920, 190);
     overflow-x: hidden;
+    
+    position: relative;
 
     // & > h3
     &__header {
@@ -16,7 +18,6 @@
     
     &__container {
         height: 270px;
-        // cursor: grab;
         
         &--position {
             position: relative;
@@ -38,6 +39,15 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    &__link {
+        @extend %margin-auto;
+        margin-top: rem(32);
+        position: absolute;
+        left: 50%;
+        bottom: clampf(8, 920, 120);
+        transform: translateX(-50%);
     }
 }
 
