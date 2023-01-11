@@ -9,11 +9,25 @@
 }
 
 @keyframes slide {
-    0% {
-        left: 0;
+    50% {
+        left: clampf(-1300, 920, -960);
     }
 
     100% {
-        left: clampf(-1300, 920, -960);
+        left: 0;
+    }
+}
+
+.attribution-anim {
+    animation: attrAnim 1s ease-in forwards;
+}
+
+@keyframes attrAnim {
+    
+    100% {
+        transform: translateX(rem(10));
+        opacity: 0;
+        visibility: 0;
+        pointer-events: none;
     }
 }
