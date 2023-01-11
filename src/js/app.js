@@ -107,4 +107,10 @@ container.addEventListener('touchmove', () => {
 
     cursorXspace = e.offsetX - cards.offsetLeft
 })
-// addEventListener('touch')
+
+// attribution
+const attribution = document.querySelector('.attribution')
+
+setInterval(() => {
+    attribution.classList.add('attribution-anim')
+}, 5000)
