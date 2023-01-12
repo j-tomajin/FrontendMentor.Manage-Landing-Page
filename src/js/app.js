@@ -113,4 +113,4 @@ const attribution = document.querySelector('.attribution')
 
 setInterval(() => {
     attribution.classList.add('attribution-anim')
-}, 5000)
+}, 5000) // animation will be play after 5 seconds
