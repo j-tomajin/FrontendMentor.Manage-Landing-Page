@@ -7,11 +7,6 @@ footer {
 .footer {
     background-color: var(--clr-primary-200);
 
-    a {
-        @include text-style(var(--clr-neutral-100), normal);
-        @extend %hover-effect;
-    }
-
     &__container { // footer > footer__container
         @extend %width;
         @extend %margin-auto;
@@ -60,6 +55,11 @@ footer {
             margin-bottom: 0;
             justify-content: space-between;
         }
+
+        a {
+            @include text-style(var(--clr-neutral-100), normal);
+            @extend %hover-effect;
+        }
     }
     &__list {
         align-self: flex-start;
@@ -92,7 +92,9 @@ footer {
         align-items: center;
         justify-content: space-around;
 
-        a {
+        & > a {
+            @include text-style(var(--clr-neutral-100), normal);
+            @extend %hover-effect;
             font-size: 24px;
             transition: transform .275s;
 
@@ -121,26 +123,4 @@ footer {
             text-align: right;
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
 }
