@@ -20,6 +20,10 @@
 
 .attribution-anim {
     animation: attrAnim 1s ease-in forwards;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes attrAnim {
