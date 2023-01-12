@@ -41,10 +41,10 @@
   border-radius: 50px;
 }
 
-.footer a {
+.footer__nav a, .footer .socials > a {
   transition: all 0.3s;
 }
-.footer a:hover {
+.footer__nav a:hover, .footer .socials > a:hover {
   color: var(--clr-primary-100);
 }
 
@@ -193,7 +193,9 @@ h6 {
 }
 
 /* A elements that don't have a class get default styles */
-a, a:focus, a:visited {
+a,
+a:focus,
+a:visited {
   text-decoration: none;
 }
 
@@ -251,6 +253,10 @@ a:not([class]) {
 .attribution-anim {
   -webkit-animation: attrAnim 1s ease-in forwards;
           animation: attrAnim 1s ease-in forwards;
+}
+.attribution-anim:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes attrAnim {
@@ -694,9 +700,6 @@ footer {
 .footer {
   background-color: var(--clr-primary-200);
 }
-.footer a {
-  color: var(--clr-neutral-100);
-}
 .footer__container {
   padding-block: clamp(3.125rem, 2.6949541284rem + 1.8348623853vw, 3.75rem) clamp(1.875rem, 0.5848623853rem + 5.504587156vw, 3.75rem);
 }
@@ -729,6 +732,9 @@ footer {
     justify-content: space-between;
   }
 }
+.footer__nav a {
+  color: var(--clr-neutral-100);
+}
 .footer__list {
   align-self: flex-start;
   font-size: clamp(0.875rem, 0.7029816514rem + 0.7339449541vw, 1.125rem);
@@ -758,11 +764,12 @@ footer {
   align-items: center;
   justify-content: space-around;
 }
-.footer .socials a {
+.footer .socials > a {
+  color: var(--clr-neutral-100);
   font-size: 24px;
   transition: transform 0.275s;
 }
-.footer .socials a:hover {
+.footer .socials > a:hover {
   transform: translateY(-0.625rem);
 }
 .footer__logo {
@@ -785,15 +792,6 @@ footer {
 }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
-}
-
-.attribution {
   position: fixed;
   right: 1rem;
   top: 1.75rem;
@@ -810,15 +808,16 @@ footer {
   position: absolute;
   right: 0;
   bottom: -2rem;
-  z-index: -1;
+  z-index: 1;
   border-left: 50px solid transparent;
   border-top: 50px solid var(--clr-primary-100);
 }
-.attribution a {
-  color: var(--clr-neutral-200);
+.attribution__link {
+  color: var(--clr-neutral-100);
   position: relative;
+  z-index: 2;
 }
-.attribution a::after {
+.attribution__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -830,6 +829,6 @@ footer {
   background-color: var(--clr-neutral-200);
   transition: width 0.3s ease-in-out;
 }
-.attribution a:hover::after {
+.attribution__link:hover::after {
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
