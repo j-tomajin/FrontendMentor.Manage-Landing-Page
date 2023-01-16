@@ -7,9 +7,9 @@ navBtn.addEventListener('click', () => {
     nav.classList.toggle('nav-toggle')
 
     if(!hamburger.src.match('icon-hamburger')) {
-        hamburger.src = './assets/icons/icon-hamburger.svg'
+        hamburger.src = './src/assets/icons/icon-hamburger.svg'
     } else {
-        hamburger.src = './assets/icons/icon-close.svg'
+        hamburger.src = './src/assets/icons/icon-close.svg'
     }
 })
 
